@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script type="text/javascript" xmlns:th="http://www.w3.org/1999/xhtml">
+    function test()
+    {
+        / // window.alert("hello");
+        var url = "/coffees/" + document.getElementById("name").value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("PATCH", url, true);
+        xhr.send(null);
+        window.alert("url is: " + url);
+    }
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee</title>
+</head>
+<body>
+<form name="myform">
+    <input type="text" id="name" name="name"/> <!-- My super coffee -->
+</form>
+
+<button type="button" onclick="test();">Get</button>
+
+
+
+</body>
+</html>
